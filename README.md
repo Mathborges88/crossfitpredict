@@ -1,39 +1,21 @@
-# crossfitpredict
-Descrição do Projeto
+# Exploratory Analysis of CrossFit Athletes
 
-Este projeto tem como objetivo criar um algoritmo de Machine Learning capaz de prever qual tipo de perfil de atleta tem mais chances de ganhar um WOD (Workout of the Day) de Crossfit. O Crossfit é uma modalidade de treinamento que engloba diversos pilares, incluindo força, cardio, ginástica e resistência. Cada atleta possui suas fraquezas e pontos fortes em relação a esses pilares.
+When planning my first data science project to showcase in my portfolio, I spent a lot of time envisioning something robust, with multiple advanced tools and techniques. However, I realized that this pursuit of 'perfection' was delaying both practice and the demonstration of the skills I already possess. Therefore, I decided to start with something more straightforward: a simple exploratory analysis that could pave the way for new insights and future, more elaborate projects. I chose CrossFit as the theme, both because it is a personal passion and due to my prior knowledge of the sport.
 
-A previsão do desempenho em um WOD é desafiadora, pois cada WOD pode exigir diferentes combinações de movimentos, como levantamento de peso olímpico (LPO), movimentos ginásticos, entre outros. Além disso, a duração e a intensidade do WOD também podem variar, tornando a tarefa de prever o vencedor ainda mais complexa.
+The detailed dataset has been compiled from competitions and events held globally. This dataset contains data on athlete demographics, including age, gender, and experience in training, alongside performance metrics like time, weight lifted, and personal records.
 
-Para abordar esse desafio, utilizaremos técnicas de ciência de dados e machine learning para extrair dados de competições passadas, como os Open da Crossfit. Caso esses dados não estejam disponíveis prontamente, faremos uso de web scraping para coletá-los.
+My goal is to uncover patterns and correlations to understand how performance can be improved and how physiology interferes with the results of the athletes.
 
-Etapas do Projeto
+# Conclusion
 
-Coleta de Dados:
-Extração dos dados de competições passadas, como os Open da Crossfit.
-Utilização de web scraping, se necessário, para obter os dados.
-Pré-processamento dos Dados:
-Limpeza dos dados, tratando valores ausentes, inconsistências e outliers.
-Transformação dos dados para formatos adequados para análise.
-Análise Exploratória dos Dados:
-Exploração dos dados para compreender as características dos atletas e dos WODs.
-Visualização de gráficos e estatísticas descritivas para identificar tendências e padrões.
-Engenharia de Recursos:
-Identificação e criação de recursos relevantes para o problema.
-Consideração de características como histórico de desempenho em WODs anteriores, especialização em pilares específicos, entre outros.
-Modelagem de Machine Learning:
-Seleção e treinamento de modelos de machine learning adequados ao problema.
-Avaliação e ajuste dos hiperparâmetros dos modelos.
-Utilização de técnicas como regressão, classificação ou aprendizado de máquina não supervisionado, dependendo do objetivo.
-Avaliação do Modelo:
-Avaliação do desempenho do modelo por meio de métricas adequadas.
-Interpretação dos resultados obtidos para identificar os principais fatores que influenciam o desempenho nos WODs.
-Implantação e Apresentação:
-Implementação do modelo em um ambiente de produção, se aplicável.
-Documentação completa do projeto, incluindo explicação das etapas e dos resultados obtidos.
-Apresentação do projeto e resultados para recrutadores ou interessados.
-Considerações Finais
+After identifying which variables have the greatest importance, meaning those that most influence the prediction of the workouts, I expected the results to closely mirror the correlation table, but it wasn't exactly like that. For example, for the workout Fran, the most correlated variable (among the independent variables) in the correlation table was run400, yet after running the machine learning models, Pull-up was identified as the most important, followed by run5k, with run400 coming in sixth place.
 
-Este projeto visa explorar a possibilidade de prever o desempenho de atletas de Crossfit em WODs, utilizando técnicas de ciência de dados e machine learning. Ao analisar dados históricos de competições e considerar as características individuais dos atletas, buscamos identificar padrões e fatores que influenciam o sucesso em diferentes tipos de WODs.
+It was interesting to see that for the workout Grace, which consists of just 30 CandJ, the most important variable turned out to be CandJ itself.
 
-Através deste projeto, espero aprimorar minhas habilidades em ciência de dados e machine learning, aplicando técnicas e conhecimentos em um contexto real. Acredito que essa análise preditiva pode trazer insights valiosos para atletas, treinadores e entusiastas de Crossfit, contribuindo para uma compreensão mais aprofundada do desempenho nessa modalidade de treinamento.
+As for the metrics, MSE and R² are not optimal and can be improved, but for the goal of identifying the variables that most impact the results of the workouts, they were satisfactory.
+
+# Next Steps
+
+* Improve the evaluation metrics by refining the models, tuning hyperparameters, and further processing the data. Assess whether the results change after these improvements.
+* Handle the ignored categorical columns through feature engineering, and then build another machine learning model to determine if these columns help predict the workout results.
+* Most importantly, finding better datasets, possibly through web scraping, to develop a machine learning model capable of predicting, based on PR results and other workouts, the results of any input workout following predefined rules.
