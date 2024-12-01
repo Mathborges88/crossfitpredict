@@ -19,3 +19,5 @@ As for the metrics, MSE and R² are not optimal and can be improved, but for the
 * Improve the evaluation metrics by refining the models, tuning hyperparameters, and further processing the data. Assess whether the results change after these improvements.
 * Handle the ignored categorical columns through feature engineering, and then build another machine learning model to determine if these columns help predict the workout results.
 * Most importantly, finding better datasets, possibly through web scraping, to develop a machine learning model capable of predicting, based on PR results and other workouts, the results of any input workout following predefined rules.
+# Meu Projeto de Ciência de Dados
+Este é um projeto de ciência de dados que visa [descrever o objetivo].
